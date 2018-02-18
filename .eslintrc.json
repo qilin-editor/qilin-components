@@ -1,0 +1,36 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "standard",
+    "prettier",
+    "prettier/react",
+    "prettier/flowtype",
+    "prettier/standard"
+  ],
+  "plugins": ["react", "flowtype", "standard", "prettier", "jsx-a11y"],
+  "env": {
+    "shared-node-browser": true,
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "impliedStrict": true,
+    "ecmaVersion": 7,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "rules": {
+    "indent": [2, 2],
+    "quotes": [2, "double"],
+    "no-else-return": 0,
+    "no-confusing-arrow": 0,
+    "no-prototype-builtins": 0,
+    "react/sort-comp": 0,
+    "react/jsx-filename-extension": 0,
+    "prettier/prettier": 2
+  }
+}

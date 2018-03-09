@@ -1,21 +1,22 @@
 {
   "parser": "babel-eslint",
+
   "extends": [
     "standard",
     "prettier",
     "prettier/react",
     "prettier/flowtype",
-    "prettier/standard"
+    "prettier/standard",
+    "plugin:react/recommended"
   ],
   "plugins": ["react", "flowtype", "standard", "prettier", "jsx-a11y"],
+
   "env": {
-    "shared-node-browser": true,
-    "browser": true,
-    "node": true,
-    "es6": true
+    "es6": true,
+    "browser": true
   },
+
   "parserOptions": {
-    "impliedStrict": true,
     "ecmaVersion": 7,
     "sourceType": "module",
     "ecmaFeatures": {
@@ -23,14 +24,27 @@
       "experimentalObjectRestSpread": true
     }
   },
+
   "rules": {
+    "quotes": [1, "double"],
     "indent": [2, 2],
-    "quotes": [2, "double"],
+
+    "no-console": [0],
+    "no-param-reassign": [0],
     "no-else-return": 0,
     "no-confusing-arrow": 0,
     "no-prototype-builtins": 0,
-    "react/sort-comp": 0,
-    "react/jsx-filename-extension": 0,
-    "prettier/prettier": 2
+
+    "react/sort-comp": [0],
+    "react/no-danger": [0],
+    "react/jsx-indent": [2, 2],
+    "react/jsx-indent-props": [2, 2],
+    "react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx"]}],
+
+    "prettier/prettier": 2,
+
+    "import/first": [0],
+    "import/prefer-default-export": [0],
+    "import/no-extraneous-dependencies": [0]
   }
 }

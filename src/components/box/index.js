@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import is from "styled-is";
+/* @flow */
+
 import Panel from "../panel";
 
 const Box = Panel.extend`

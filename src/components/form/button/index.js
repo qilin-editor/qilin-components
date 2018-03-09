@@ -1,3 +1,5 @@
+/* @flow */
+
 import styled from "styled-components";
 import is from "styled-is";
 
@@ -37,7 +39,7 @@ const Button = styled.button`
     display: inline-flex;
   `};
 
-  -webkit-appearance: none;
+  appearance: none;
   -webkit-app-region: no-drag;
 `;
 

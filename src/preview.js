@@ -7,7 +7,7 @@ import Panel from "./components/panel";
 import Section from "./components/section";
 import Controls, { Control } from "./components/control";
 import Button from "./components/form/button";
-import { Flex, Box as Unit } from "./components/grid";
+import { Flex, Unit } from "./components/grid";
 
 const theme = {
   foreground: "#5b7575",

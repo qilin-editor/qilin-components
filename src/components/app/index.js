@@ -47,7 +47,9 @@ type Props = {
 };
 
 injectGlobal`
-  *, *:after, *:before {
+  *,
+  *::after,
+  *::before {
     box-sizing: border-box;
   }
 

@@ -31,18 +31,17 @@ const Bar = styled.header`
 
   & > * {
     display: flex;
-    align-items: center;
 
-    &:nth-child(1) {
+    align-items: center;
+    justify-self: center;
+
+    &:first-child {
       justify-self: start;
     }
 
-    &:nth-child(2) {
-      justify-self: center;
-    }
-
-    &:nth-child(3) {
+    &:last-child {
       justify-self: end;
+      grid-column-end: end;
     }
   }
 `;

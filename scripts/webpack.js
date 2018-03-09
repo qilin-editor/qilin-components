@@ -3,12 +3,12 @@ const Webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/preview.js",
+  entry: "../src/preview.js",
   target: "web",
   context: __dirname,
 
   output: {
-    path: path.resolve(__dirname, "./build"),
+    path: path.resolve(__dirname, "../build"),
     filename: "preview.js"
   },
 
@@ -28,7 +28,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./preview/index.html"
+      template: path.resolve(__dirname, "../preview/index.html")
     })
   ]
 };

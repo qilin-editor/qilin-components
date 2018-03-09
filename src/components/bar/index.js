@@ -35,13 +35,14 @@ const Bar = styled.header`
     align-items: center;
     justify-self: center;
 
-    &:first-child {
-      justify-self: start;
-    }
-
     &:last-child {
       justify-self: end;
-      grid-column-end: end;
+      grid-column-end: c;
+    }
+
+    &:first-child {
+      justify-self: start;
+      grid-column-end: a;
     }
   }
 `;

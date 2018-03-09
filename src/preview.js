@@ -7,6 +7,7 @@ import Panel from "./components/panel";
 import Section from "./components/section";
 import Controls, { Control } from "./components/control";
 import Button from "./components/form/button";
+import { Flex, Box as Unit } from "./components/grid";
 
 const theme = {
   foreground: "#5b7575",
@@ -52,36 +53,60 @@ ReactDOM.render(
       <Section horizontal>
         <Box>
           <Bar header>
-            <div>Buttons</div>
+            <p>Buttons</p>
           </Bar>
 
-          <Button small>Button</Button>
-          <Button>Button</Button>
-          <Button large>Button</Button>
+          <Flex>
+            <Unit width={1 / 2}>
+              <Button inline>Button</Button>
+              <Button inline>Button</Button>
+              <Button inline>Button</Button>
+            </Unit>
+
+            <Unit width={1 / 2}>Lorem ipsum dolor sit amet</Unit>
+          </Flex>
+
+          <Flex>
+            <Unit width={1 / 2}>
+              <Button small>Button</Button>
+              <Button>Button</Button>
+              <Button large>Button</Button>
+            </Unit>
+
+            <Unit width={1 / 2}>Lorem ipsum dolor sit amet</Unit>
+          </Flex>
         </Box>
 
         <Box>
           <Bar header>
-            <div>Another Panel</div>
+            <p>Grid system</p>
           </Bar>
 
-          <div>Lorem ipsum</div>
-        </Box>
+          <Flex>
+            <Unit width={1 / 2}>
+              <Box>1/2</Box>
+            </Unit>
 
-        <Box>
-          <Bar header>
-            <div>Another Panel</div>
-          </Bar>
+            <Unit width={1 / 2}>
+              <Box>1/2</Box>
+            </Unit>
+          </Flex>
 
-          <div>Lorem ipsum</div>
+          <Flex>
+            <Unit width={1 / 3}>
+              <Box>1/3</Box>
+            </Unit>
+
+            <Unit width={2 / 3}>
+              <Box>2/3</Box>
+            </Unit>
+          </Flex>
         </Box>
       </Section>
     </Section>
 
     <Bar footer>
       <div>Message</div>
-
-      <div />
 
       <div>
         <Button>Item A</Button>

@@ -33,6 +33,10 @@ const Button = styled.button`
     padding: 0.25rem .65rem;
   `};
 
+  ${is("inline")`
+    display: inline-flex;
+  `};
+
   -webkit-appearance: none;
   -webkit-app-region: no-drag;
 `;

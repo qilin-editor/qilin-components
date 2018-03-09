@@ -19,12 +19,15 @@
     "url": "https://github.com/qilin-editor/qilin-components/issues"
   },
   "scripts": {
-    "prepare": "npm run lint:scripts && npm run lint:styles && npm run start",
-    "start": "npm run build",
-    "build": "webpack --progress --hide-modules --config config.build.js",
-    "watch": "webpack-dev-server --progress --config config.watch.js",
+    "prepare": "npm run lint && npm run start",
+    "clean": "rm -rf ./build",
+    "start": "npm run clean && npm run build:components",
+    "watch": "npm run clean && npm run build:preview",
+    "build:components": "babel ./src/components --out-dir ./build",
+    "build:preview": "webpack-dev-server --mode=development",
     "lint:scripts": "eslint --fix ./src",
     "lint:styles": "stylelint './src/**/*.js'",
+    "lint": "npm run lint:scripts && npm run lint:styles",
     "flow": "flow"
   },
   "dependencies": {

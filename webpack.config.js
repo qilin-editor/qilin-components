@@ -1,7 +1,6 @@
 const path = require("path");
 const Webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const {BundleAnalyzerPlugin} = require("webpack-bundle-analyzer");
 
 module.exports = {
   entry: "./src/preview.js",
@@ -10,7 +9,7 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, "./build"),
-    filename: "index.js"
+    filename: "preview.js"
   },
 
   resolve: {
@@ -31,6 +30,5 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./preview/index.html"
     })
-    // new BundleAnalyzerPlugin()
   ]
 };

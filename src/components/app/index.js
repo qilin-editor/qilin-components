@@ -3,6 +3,26 @@
 import * as React from "react";
 import styled, { ThemeProvider, injectGlobal } from "styled-components";
 
+// Syntax information for styling editor highlights. This is based on `atom`
+// light-syntax. Should be enough in most cases.
+//
+// @see https://github.com/atom/one-light-syntax/blob/master/styles/syntax-variables.less
+type Syntax = {
+  import: string,
+  snippet: string,
+  comment: string,
+  variable: string,
+  constant: string,
+  property: string,
+  function: string,
+  attribute: string,
+  value: string,
+  class: string,
+  method: string,
+  keyword: string,
+  tag: string
+};
+
 // Theme information for styling editor components. This is copied verbatim from
 // `syntect` and that in turn is derived from TextMate's `.tmTheme` format. Many
 // fields may not be used.
@@ -21,7 +41,7 @@ type Theme = {
   lineHighlight: string,
   // Background color of regions matching the current search
   findHighlight: string,
-  // Background color of regions matching the current search
+  // Text color of regions matching the current search
   findHighlightForeground: string,
   // Background color of the gutter
   gutter: string,
@@ -29,16 +49,16 @@ type Theme = {
   gutterForeground: string,
   // The background color of selections
   selection: string,
-  // text color of the selection regions
+  // Text color of the selection regions
   selectionForeground: string,
-  // Color of the selection regions border
-  selectionBorder: string,
   // Background color of inactive selections (inactive view)
   inactiveSelection: string,
   // Text color of inactive selections (inactive view)
   inactiveSelectionForeground: string,
   // The color of the shadow used when a text area can be horizontally scrolled
-  shadow: string
+  shadow: string,
+  // Syntax colors
+  syntax: Syntax
 };
 
 type Props = {

@@ -51,6 +51,10 @@ const RawEditor = (props: Props) => {
 };
 
 const Editor = styled(RawEditor)`
+  .react-codemirror2 {
+    height: 100%;
+  }
+
   .CodeMirror {
     height: 100%;
     width: 100%;

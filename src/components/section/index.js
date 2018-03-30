@@ -6,7 +6,7 @@ const Container = styled.section`
   position: relative;
 
   display: flex;
-  flex-grow: 1;
+  flex: 1;
   flex-direction: ${props => (props.vertical ? "row" : "column")};
 
   overflow-y: auto;

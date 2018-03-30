@@ -1,7 +1,7 @@
 {
   "name": "qilin-components",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.11",
   "license": "MIT",
   "description": "Components used by Qilin editor and Qilin plugins",
   "keywords": [

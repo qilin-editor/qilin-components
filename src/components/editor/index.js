@@ -445,6 +445,55 @@ const Editor = styled(RawEditor)`
     min-height: 1px;
   }
 
+  /* Scroll addon */
+  .CodeMirror-overlayscroll .CodeMirror-scrollbar-filler,
+  .CodeMirror-overlayscroll .CodeMirror-gutter-filler {
+    display: none;
+  }
+
+  .CodeMirror-simplescroll-horizontal,
+  .CodeMirror-simplescroll-vertical,
+  .CodeMirror-overlayscroll-horizontal,
+  .CodeMirror-overlayscroll-vertical {
+    position: absolute;
+    z-index: 6;
+
+    div {
+      position: absolute;
+      box-sizing: border-box;
+
+      background: ${props => props.theme.gutter};
+      border-width: 1px;
+      border-style: solid;
+      border-color: ${props => props.theme.gutterForeground};
+      border-radius: 3px;
+    }
+  }
+
+  .CodeMirror-simplescroll-horizontal,
+  .CodeMirror-overlayscroll-horizontal {
+    bottom: 0;
+    left: 0;
+    height: 6px;
+
+    div {
+      bottom: 0;
+      height: 100%;
+    }
+  }
+
+  .CodeMirror-simplescroll-vertical,
+  .CodeMirror-overlayscroll-vertical {
+    right: 0;
+    top: 0;
+    width: 6px;
+
+    div {
+      right: 0;
+      width: 100%;
+    }
+  }
+
   /* Reset some styles that the rest of the page might have set */
   .CodeMirror pre {
     position: relative;

@@ -50,8 +50,9 @@ const RawEditor = (props: Props) => {
   return <CodeMirror {...props} options={options} />;
 };
 
+/* stylelint-disable */
 const Editor = styled(RawEditor)`
-  .react-codemirror2 {
+  &.react-codemirror2 {
     height: 100%;
   }
 
@@ -507,7 +508,6 @@ const Editor = styled(RawEditor)`
   .CodeMirror-gutter,
   .CodeMirror-gutters,
   .CodeMirror-linenumber {
-    -moz-box-sizing: content-box;
     box-sizing: content-box;
   }
 
@@ -555,6 +555,7 @@ const Editor = styled(RawEditor)`
     background: none;
   }
 `;
+/* stylelint-enable */
 
 export default Editor;
 export { RawEditor };

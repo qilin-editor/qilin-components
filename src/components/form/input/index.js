@@ -30,7 +30,7 @@ const Input = styled.input`
   font-weight: 400;
 
   padding: 0.5rem;
-  margin: 0.5rem;
+  margin: 0.5rem 0;
 
   &:focus {
     border-color: ${props => props.theme.caret};

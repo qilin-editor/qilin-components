@@ -7,7 +7,7 @@ const Checkbox = styled.input.attrs({
   type: "checkbox"
 })`
   position: relative;
-  display: inline-block;
+  display: inline-flex;
   vertical-align: middle;
 
   width: 17px;

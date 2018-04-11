@@ -35,11 +35,7 @@ const Input = styled.input.attrs({
   color: ${props => props.theme.foreground};
 
   padding: 0;
-  margin: 0.5rem;
-
-  ${is("inline")`
-    display: inline-flex;
-  `};
+  margin: 9px;
 
   -webkit-app-region: no-drag;
   -webkit-appearance: none;

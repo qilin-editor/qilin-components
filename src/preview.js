@@ -11,7 +11,11 @@ import Button from "./components/form/button";
 import Checkbox from "./components/form/checkbox";
 import Color from "./components/form/color";
 import Input from "./components/form/input";
-import Label, { LabelTitle, LabelDescription } from "./components/form/label";
+import Label, {
+  LabelDescription,
+  LabelSub,
+  LabelSup
+} from "./components/form/label";
 import Textarea from "./components/form/textarea";
 import { Flex, Unit } from "./components/grid";
 
@@ -121,9 +125,17 @@ class Preview extends Component {
 
               <Flex>
                 <Unit width={1 / 2}>
-                  <Input type="text" placeholder="Text" />
-                  <Input type="search" placeholder="Search" />
-                  <Textarea placeholder="Text area" />
+                  <Label>
+                    <Input type="text" placeholder="Text" />
+                  </Label>
+
+                  <Label>
+                    <Input type="search" placeholder="Search" />
+                  </Label>
+
+                  <Label>
+                    <Textarea placeholder="Text area" />
+                  </Label>
                 </Unit>
 
                 <Unit width={1 / 2}>Lorem ipsum dolor sit amet</Unit>
@@ -131,8 +143,29 @@ class Preview extends Component {
 
               <Flex>
                 <Unit width={1 / 2}>
-                  <Color inline />
-                  <Input inline type="text" placeholder="Text" />
+                  <Label>
+                    <LabelDescription>
+                      <LabelSup>Option name</LabelSup>
+                      <LabelSub>Option description</LabelSub>
+                    </LabelDescription>
+
+                    <Input type="text" placeholder="Text" />
+                  </Label>
+                </Unit>
+
+                <Unit width={1 / 2}>Lorem ipsum dolor sit amet</Unit>
+              </Flex>
+
+              <Flex>
+                <Unit width={1 / 2}>
+                  <Label>
+                    <Color />
+
+                    <LabelDescription>
+                      <LabelSup>Option name</LabelSup>
+                      <LabelSub>Option description</LabelSub>
+                    </LabelDescription>
+                  </Label>
                 </Unit>
 
                 <Unit width={1 / 2}>Lorem ipsum dolor sit amet</Unit>
@@ -143,22 +176,31 @@ class Preview extends Component {
                   <Label>
                     <Checkbox />
 
-                    <LabelTitle>Option name</LabelTitle>
-                    <LabelDescription>Option description</LabelDescription>
+                    <LabelDescription>
+                      <LabelSup>Option name</LabelSup>
+                      <LabelSub>
+                        Option description Option description Option description
+                        Option description Option description Option description
+                      </LabelSub>
+                    </LabelDescription>
                   </Label>
 
                   <Label>
                     <Checkbox />
 
-                    <LabelTitle>Option name</LabelTitle>
-                    <LabelDescription>Option description</LabelDescription>
+                    <LabelDescription>
+                      <LabelSup>Option name</LabelSup>
+                      <LabelSub>Option description</LabelSub>
+                    </LabelDescription>
                   </Label>
 
                   <Label>
                     <Checkbox />
 
-                    <LabelTitle>Option name</LabelTitle>
-                    <LabelDescription>Option description</LabelDescription>
+                    <LabelDescription>
+                      <LabelSup>Option name</LabelSup>
+                      <LabelSub>Option description</LabelSub>
+                    </LabelDescription>
                   </Label>
                 </Unit>
 

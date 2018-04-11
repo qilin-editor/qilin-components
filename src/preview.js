@@ -8,6 +8,9 @@ import Editor from "./components/editor";
 import Section from "./components/section";
 import Controls, { Control } from "./components/control";
 import Button from "./components/form/button";
+import Color from "./components/form/color";
+import Input from "./components/form/input";
+import Textarea from "./components/form/textarea";
 import { Flex, Unit } from "./components/grid";
 
 const syntax = {
@@ -103,6 +106,31 @@ class Preview extends Component {
                   <Button small>Button</Button>
                   <Button>Button</Button>
                   <Button large>Button</Button>
+                </Unit>
+
+                <Unit width={1 / 2}>Lorem ipsum dolor sit amet</Unit>
+              </Flex>
+            </Box>
+
+            <Box>
+              <Bar header>
+                <p>Inputs</p>
+              </Bar>
+
+              <Flex>
+                <Unit width={1 / 2}>
+                  <Input type="text" placeholder="Text" />
+                  <Input type="search" placeholder="Search" />
+                  <Textarea placeholder="Text area" />
+                </Unit>
+
+                <Unit width={1 / 2}>Lorem ipsum dolor sit amet</Unit>
+              </Flex>
+
+              <Flex>
+                <Unit width={1 / 2}>
+                  <Color inline />
+                  <Input inline type="text" placeholder="Text" />
                 </Unit>
 
                 <Unit width={1 / 2}>Lorem ipsum dolor sit amet</Unit>

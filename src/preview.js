@@ -8,8 +8,10 @@ import Editor from "./components/editor";
 import Section from "./components/section";
 import Controls, { Control } from "./components/control";
 import Button from "./components/form/button";
+import Checkbox from "./components/form/checkbox";
 import Color from "./components/form/color";
 import Input from "./components/form/input";
+import Label, { LabelTitle, LabelDescription } from "./components/form/label";
 import Textarea from "./components/form/textarea";
 import { Flex, Unit } from "./components/grid";
 
@@ -131,6 +133,33 @@ class Preview extends Component {
                 <Unit width={1 / 2}>
                   <Color inline />
                   <Input inline type="text" placeholder="Text" />
+                </Unit>
+
+                <Unit width={1 / 2}>Lorem ipsum dolor sit amet</Unit>
+              </Flex>
+
+              <Flex>
+                <Unit width={1 / 2}>
+                  <Label>
+                    <Checkbox />
+
+                    <LabelTitle>Option name</LabelTitle>
+                    <LabelDescription>Option description</LabelDescription>
+                  </Label>
+
+                  <Label>
+                    <Checkbox />
+
+                    <LabelTitle>Option name</LabelTitle>
+                    <LabelDescription>Option description</LabelDescription>
+                  </Label>
+
+                  <Label>
+                    <Checkbox />
+
+                    <LabelTitle>Option name</LabelTitle>
+                    <LabelDescription>Option description</LabelDescription>
+                  </Label>
                 </Unit>
 
                 <Unit width={1 / 2}>Lorem ipsum dolor sit amet</Unit>

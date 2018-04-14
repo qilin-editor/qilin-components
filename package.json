@@ -39,6 +39,7 @@
   "dependencies": {
     "codemirror": "5.35.0",
     "grid-styled": "^3.2.1",
+    "material-icons-react": "^1.0.0",
     "react": "^16.2.0",
     "react-codemirror2": "4.1.0",
     "react-dom": "^16.2.0",
@@ -55,6 +56,7 @@
     "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6.24.1",
     "compression-webpack-plugin": "^1.1.11",
+    "css-loader": "^0.28.11",
     "eslint": "^4.18.2",
     "eslint-config-prettier": "^2.9.0",
     "eslint-config-standard": "^11.0.0",
@@ -72,6 +74,7 @@
     "fs-extra": "^5.0.0",
     "html-webpack-plugin": "^3.0.6",
     "prettier": "^1.11.1",
+    "style-loader": "^0.20.3",
     "stylelint": "^9.1.1",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-config-styled-components": "^0.1.1",

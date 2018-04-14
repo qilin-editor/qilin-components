@@ -8,3 +8,4 @@ export { default as Panel } from "./panel";
 export { default as Section } from "./section";
 export { Button } from "./form";
 export { Flex, Unit } from "./grid";
+export * from "./icon";

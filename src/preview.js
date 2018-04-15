@@ -17,7 +17,9 @@ import Label, {
   LabelSup
 } from "./components/form/label";
 import Textarea from "./components/form/textarea";
+import List, { ListItem, ListText, ListSeparator } from "./components/list";
 import { Flex, Unit } from "./components/grid";
+import Icon from "./components/icon";
 
 const syntax = {
   import: "hsl(301, 63%, 40%)",
@@ -88,7 +90,29 @@ class Preview extends Component {
         </Bar>
 
         <Section vertical>
-          <Panel width="200px" border="0 1px 0 0" />
+          <Panel width="200px" border="0 1px 0 0">
+            <List>
+              <ListItem component={<a />} href="#/test">
+                <Icon icon="dashboard" size="28" />
+                <ListText primary="Dashboard" />
+              </ListItem>
+
+              <ListItem>
+                <Icon icon="assessment" size="28" />
+                <ListText primary="Analytics" secondary="Real-time" />
+              </ListItem>
+
+              <ListItem>
+                <Icon icon="star" size="28" />
+                <ListText primary="Element" secondary={<span>Foo bar</span>} />
+              </ListItem>
+
+              <ListSeparator />
+
+              <ListItem>Test</ListItem>
+            </List>
+          </Panel>
+
           <Panel width="150px" border="0 1px 0 0" />
 
           <Section horizontal>

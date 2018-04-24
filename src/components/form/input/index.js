@@ -53,7 +53,7 @@ const Input = styled.input`
   `};
 
   -webkit-app-region: no-drag;
-  -webkit-appearance: textfield;
+  appearance: textfield;
 `;
 
 export default Input;

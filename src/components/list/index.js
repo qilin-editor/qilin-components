@@ -3,7 +3,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import is from "styled-is";
 
 const List = styled.nav`
   position: relative;

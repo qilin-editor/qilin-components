@@ -1,7 +1,6 @@
 /* @flow */
 
 import styled from "styled-components";
-import is from "styled-is";
 
 const Label = styled.label`
   display: flex;

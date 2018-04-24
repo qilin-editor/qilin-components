@@ -1,7 +1,6 @@
 /* @flow */
 
 import styled from "styled-components";
-import is from "styled-is";
 
 const Checkbox = styled.input.attrs({
   type: "checkbox"
@@ -48,7 +47,6 @@ const Checkbox = styled.input.attrs({
     background-color: ${props => props.theme.background};
 
     transform-origin: 0 0;
-    transition-delay: 0.05s;
     transition: transform 0.1s cubic-bezier(0.5, 0.15, 0.2, 1),
       opacity 0.1s cubic-bezier(0.5, 0.15, 0.2, 1);
 
@@ -78,7 +76,7 @@ const Checkbox = styled.input.attrs({
   }
 
   -webkit-app-region: no-drag;
-  -webkit-appearance: none;
+  appearance: none;
 `;
 
 export default Checkbox;

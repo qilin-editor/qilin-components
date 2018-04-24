@@ -1,7 +1,6 @@
 /* @flow */
 
 import styled from "styled-components";
-import is from "styled-is";
 
 const Input = styled.input.attrs({
   type: "color"
@@ -38,7 +37,7 @@ const Input = styled.input.attrs({
   margin: 9px;
 
   -webkit-app-region: no-drag;
-  -webkit-appearance: none;
+  appearance: none;
 `;
 
 export default Input;

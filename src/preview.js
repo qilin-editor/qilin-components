@@ -56,20 +56,6 @@ const theme = {
 };
 
 class Preview extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      editor: ""
-    };
-
-    this.onEditorChange = this.onEditorChange.bind(this);
-  }
-
-  onEditorChange(editor, data, value) {
-    this.setState({ editor: value });
-  }
-
   render() {
     return (
       <App theme={theme}>
@@ -263,13 +249,7 @@ class Preview extends Component {
                 <p>Editor</p>
               </Bar>
 
-              <Editor
-                value={this.state.editor}
-                options={{
-                  lineNumbers: true
-                }}
-                onBeforeChange={this.onEditorChange}
-              />
+              <Editor value="Initial value" options={{ lineNumbers: true }} />
             </Box>
           </Section>
         </Section>

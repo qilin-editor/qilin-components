@@ -2,7 +2,7 @@
 
 import React from "react";
 import styled from "styled-components";
-import { Controlled as CodeMirror } from "react-codemirror2";
+import { UnControlled as CodeMirror } from "react-codemirror2";
 
 // CodeMirror plugins
 import "codemirror/mode/gfm/gfm";
@@ -23,11 +23,18 @@ type Props = {
   options?: Object,
   className?: string,
 
+  editorDidAttach?: (editor: Object) => any,
   editorDidConfigure?: (editor: Object) => any,
-  editorDidMount?: (editor: Object, next: Function) => any,
+  editorDidDetach?: (editor: Object) => any,
+  editorDidMount?: (editor: Object, next: ?Function) => any,
   editorWillMount?: () => any,
   editorWillUnmount?: () => any,
-  onBeforeChange: (editor: Object, data: Object, value: string) => any,
+  onBeforeChange: (
+    editor: Object,
+    data: Object,
+    value: string,
+    next: ?Function
+  ) => any,
   onChange: (editor: Object, data: Object, value: string) => any
 };
 

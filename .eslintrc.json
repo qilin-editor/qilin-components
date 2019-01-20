@@ -26,6 +26,12 @@
     }
   },
 
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+
   "rules": {
     "quotes": [1, "double"],
     "indent": [2, 2],

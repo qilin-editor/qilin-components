@@ -1,8 +1,8 @@
 // As from FAQ: https://github.com/flowtype/flow-typed/wiki/FAQs
 // If you're not planing on versioning your definitions, the preferred way is to
-// copy source files to `*.js.flow`` format, and include them with the release.
+// copy source files to `*.js.flow` format, and include them with the release.
 
-import { basename, resolve } from "path";
+import { resolve } from "path";
 import { copy } from "fs-extra";
 import glob from "glob";
 

@@ -33,7 +33,7 @@ async function createPackageFile() {
 
   await writeFile(newPackagePath, JSON.stringify(newPackageData), "utf8");
 
-  console.log(`• Created package.json -> ${getLocalPath(newPackagePath)}`);
+  console.log(`• Created package.json -> ${getLocalPath(newPackagePath)}`);
 }
 
 async function run() {

@@ -1,7 +1,7 @@
 /* @flow */
 
 import * as React from "react";
-import styled, { ThemeProvider, injectGlobal } from "styled-components";
+import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 
 // Syntax information for styling editor highlights. This is based on `atom`
 // light-syntax. Should be enough in most cases.
@@ -66,7 +66,7 @@ type Props = {
   children: React.Node
 };
 
-injectGlobal`
+const QilinReset = createGlobalStyle`
   *,
   *::after,
   *::before {
@@ -102,7 +102,10 @@ const Content = styled.main`
 
 const App = ({ theme, children }: Props) => (
   <ThemeProvider theme={theme}>
-    <Content>{children}</Content>
+    <React.Fragment>
+      <QilinReset />
+      <Content>{children}</Content>
+    </React.Fragment>
   </ThemeProvider>
 );
 

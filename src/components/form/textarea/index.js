@@ -1,8 +1,9 @@
 /* @flow */
 
+import styled from "styled-components";
 import Input from "../input";
 
-const Textarea = Input.withComponent("textarea").extend`
+const Textarea = styled(Input.withComponent("textarea"))`
   resize: vertical;
 `;
 

@@ -112,6 +112,7 @@ class Preview extends Component {
                   <Button inline>Button</Button>
                   <Button inline>Button</Button>
                   <Button inline>Button</Button>
+                  <Button inline>Button</Button>
                 </Unit>
 
                 <Unit width={1 / 2}>Lorem ipsum dolor sit amet</Unit>

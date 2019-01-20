@@ -60,7 +60,7 @@ const ListPrimary = styled.p`
   padding: 0;
 `;
 
-const ListSecondary = ListPrimary.extend`
+const ListSecondary = styled(ListPrimary)`
   opacity: 0.75;
   font-size: 0.85rem;
 `;

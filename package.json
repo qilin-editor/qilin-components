@@ -1,0 +1,103 @@
+{
+  "name": "qilin-components",
+  "private": true,
+  "version": "0.0.133",
+  "license": "MIT",
+  "description": "Components used by Qilin editor and Qilin plugins",
+  "keywords": [
+    "qilin",
+    "qilin-theme",
+    "qilin-plugin",
+    "qilin-components"
+  ],
+  "author": "Łaniewski Bartosz <bartosz@laniewski.me> (https://laniewski.me/)",
+  "engines": {
+    "node": ">=8.0",
+    "npm": ">=5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qilin-editor/qilin-components"
+  },
+  "bugs": {
+    "url": "https://github.com/qilin-editor/qilin-components/issues"
+  },
+  "scripts": {
+    "prepare": "npm run lint && npm run build",
+    "clean": "npx rimraf ./build",
+    "start": "npm run build && npm run build:preview",
+    "build:preview": "npx webpack-dev-server --mode=development --config=./scripts/webpack.js",
+    "build:components": "npx babel ./src/components --out-dir ./build",
+    "build:copy": "npx babel-node ./scripts/copy.js",
+    "build:defs": "npx babel-node ./scripts/defs.js",
+    "build:scripts": "npm run build:components && npm run build:defs",
+    "build": "npm run clean && npm run build:scripts && npm run build:copy",
+    "lint:scripts": "npx eslint --fix ./src",
+    "lint:styles": "npx stylelint './src/**/*.js'",
+    "lint": "npm run lint:scripts && npm run lint:styles",
+    "test:jest": "npx jest",
+    "test:flow": "npx flow",
+    "test": "npm run test:flow && npm run lint"
+  },
+  "dependencies": {
+    "codemirror": "5.42.2",
+    "grid-styled": "^5.0.2",
+    "material-icons-react": "1.0.4",
+    "react": "16.7.0",
+    "react-codemirror2": "5.1.0",
+    "react-dom": "16.7.0",
+    "styled-components": "4.1.3",
+    "styled-is": "1.1.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/node": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^9.0.0",
+    "babel-jest": "^23.4.2",
+    "babel-loader": "^8.0.0",
+    "compression-webpack-plugin": "2.0.0",
+    "css-loader": "^2.1.0",
+    "eslint": "5.12.1",
+    "eslint-config-prettier": "3.6.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-loader": "2.1.1",
+    "eslint-plugin-flowtype": "3.2.1",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.2",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-prettier": "3.0.1",
+    "eslint-plugin-promise": "4.0.1",
+    "eslint-plugin-react": "7.12.4",
+    "eslint-plugin-standard": "4.0.0",
+    "file-loader": "^3.0.1",
+    "flow-bin": "^0.91.0",
+    "fs-extra": "^7.0.1",
+    "glob": "7.1.3",
+    "html-webpack-plugin": "3.2.0",
+    "jest": "23.6.0",
+    "prettier": "1.16.0",
+    "react-test-renderer": "16.7.0",
+    "rimraf": "2.6.3",
+    "style-loader": "^0.23.1",
+    "stylelint": "9.10.1",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "1.5.2",
+    "webpack": "4.29.0",
+    "webpack-cli": "3.2.1",
+    "webpack-dev-server": "3.1.14"
+  },
+  "maintainers": [
+    {
+      "name": "Bartosz Łaniewski",
+      "email": "bartosz@laniewski.me",
+      "web": "https://laniewski.me"
+    }
+  ]
+}

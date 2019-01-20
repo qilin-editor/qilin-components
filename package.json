@@ -1,10 +1,15 @@
 {
   "name": "qilin-components",
   "private": true,
-  "version": "0.0.132",
+  "version": "0.0.133",
   "license": "MIT",
   "description": "Components used by Qilin editor and Qilin plugins",
-  "keywords": ["qilin", "qilin-theme", "qilin-plugin", "qilin-components"],
+  "keywords": [
+    "qilin",
+    "qilin-theme",
+    "qilin-plugin",
+    "qilin-components"
+  ],
   "author": "Łaniewski Bartosz <bartosz@laniewski.me> (https://laniewski.me/)",
   "engines": {
     "node": ">=8.0",
@@ -21,8 +26,7 @@
     "prepare": "npm run lint && npm run build",
     "clean": "npx rimraf ./build",
     "start": "npm run build && npm run build:preview",
-    "build:preview":
-      "npx webpack-dev-server --mode=development --config=./scripts/webpack.js",
+    "build:preview": "npx webpack-dev-server --mode=development --config=./scripts/webpack.js",
     "build:components": "npx babel ./src/components --out-dir ./build",
     "build:copy": "npx babel-node ./scripts/copy.js",
     "build:defs": "npx babel-node ./scripts/defs.js",
